@@ -16,7 +16,7 @@ export interface IProps {
 
 const Container = (props: IProps) => {
   const disqusConfig = {
-    url: `https://${THEME_LABEL[theme].EN.toLowerCase()}.qustory.com${
+    url: `https://${THEME_LABEL[props.theme].EN.toLowerCase()}.qustory.com${
       props.path
     }`,
     identifier: props.identifier,
