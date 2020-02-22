@@ -1,28 +1,9 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import ListOfCategory, { CategoryType } from './ListOfCategory';
+import ListOfCategory from './ListOfCategory';
 
 import './index.scss';
-
-export enum Theme {
-  Life,
-  Developer,
-  CivicHacker
-}
-
-export const THEME_LABEL: Array<{ KR: string; EN: string }> = [];
-THEME_LABEL[Theme.Life] = {
-  KR: '일상',
-  EN: 'Life'
-};
-THEME_LABEL[Theme.Developer] = {
-  KR: '개발',
-  EN: 'Developer'
-};
-THEME_LABEL[Theme.CivicHacker] = {
-  KR: '시빅해킹',
-  EN: 'CivicHacker'
-};
+import { CategoryType, Theme, THEME_LABEL } from '../../types';
 
 interface IProps {
   theme: Theme;

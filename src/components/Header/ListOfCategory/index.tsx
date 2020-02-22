@@ -1,11 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import './index.scss';
 import { graphql, Link } from 'gatsby';
-
-export enum CategoryType {
-  TAGS,
-  SERIES
-}
+import { CategoryType } from '../../../types';
 
 interface IProps {
   categoryType: CategoryType;
