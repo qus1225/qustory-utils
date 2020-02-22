@@ -12,7 +12,18 @@ const Container = ({ post, theme }: IProps) => {
     <div className="post-container">
       <div className="intro">
         <div className="title">{post.frontmatter.title}</div>
+
+        {post.fields.series && (
+          <div className="series">
+            <a href={`/series/${post.fields.series}`}>
+              <i className="las la-copy"></i>
+              {`'${post.fields.series}' 시리즈`}
+            </a>
+          </div>
+        )}
+
         <div className="sub-title">{post.frontmatter.subTitle}</div>
+
         <div className="created-at">
           {post.fields.prefix
             ? post.fields.prefix.replace('-', '.').replace('-', '.')
@@ -29,15 +40,6 @@ const Container = ({ post, theme }: IProps) => {
 
       {post.frontmatter.summary && (
         <div className="summary">{post.frontmatter.summary}</div>
-      )}
-
-      {post.fields.series && (
-        <div className="series">
-          <a href={`/series/${post.fields.series}`}>
-            <i className="las la-copy"></i>
-            {`'${post.fields.series}' 시리즈`}
-          </a>
-        </div>
       )}
 
       <div className="tags">
