@@ -33,7 +33,7 @@ export interface ISEOMetaItemType2 {
   content: string;
 }
 
-export interface ISeoProps {
+export interface ISEOProps {
   title: string;
   description?: string;
   imageUrl?: string;
