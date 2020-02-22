@@ -1,0 +1,17 @@
+@import '../../styles//common/common.scss';
+
+.component-container {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+
+  > a {
+    background-color: $gray7;
+    padding: 5px 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    @media (max-width: $xs) {
+      font-size: 12px;
+    }
+  }
+}
