@@ -8,6 +8,8 @@ import { CategoryType, Theme, THEME_LABEL } from '../../types';
 interface IProps {
   theme: Theme;
   children: any;
+  seriesList: Array<string>;
+  tagList: Array<string>;
 }
 
 const Rss = ({ theme }: { theme: Theme }) => {
@@ -36,34 +38,6 @@ const Rss = ({ theme }: { theme: Theme }) => {
 const Container = (props: IProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const {
-    allMarkdownRemark: { edges }
-  } = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark(filter: { fields: { prefix: { ne: "" } } }) {
-          edges {
-            node {
-              fields {
-                series
-                tags
-              }
-            }
-          }
-        }
-      }
-    `
-  );
-
-  let seriesList: Array<any> = [];
-  let tagList: Array<any> = [];
-  edges.forEach((edge: any) => {
-    seriesList.push(edge.node.fields.series);
-    tagList = [...tagList, ...edge.node.fields.tags];
-  });
-  seriesList = [...new Set(seriesList)];
-  tagList = [...new Set(tagList)];
-
   return (
     <main>
       <div className="content-container">
@@ -89,9 +63,12 @@ const Container = (props: IProps) => {
             <div className={`area-to-expand ${isExpanded ? 'active' : ''}`}>
               <ListOfCategory
                 categoryType={CategoryType.SERIES}
-                list={seriesList}
+                list={props.seriesList}
               />
-              <ListOfCategory categoryType={CategoryType.TAGS} list={tagList} />
+              <ListOfCategory
+                categoryType={CategoryType.TAGS}
+                list={props.tagList}
+              />
             </div>
             <div className="fold-btn-container">
               {!isExpanded && (
