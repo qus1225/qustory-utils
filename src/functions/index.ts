@@ -1,4 +1,4 @@
-import { CategoryType } from '../../types';
+import { CategoryType } from '../types';
 
 /**
  * gcategoryType은 astsby-node.js에서 전달받는 data라 enum이 아닌 string으로 넘어옴
