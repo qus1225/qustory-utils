@@ -32,3 +32,11 @@ export interface ISEOMetaItemType2 {
   property: string;
   content: string;
 }
+
+export interface ISeoProps {
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  keywords?: Array<string>;
+  meta?: Array<ISEOMetaItemType1 | ISEOMetaItemType2>;
+}
