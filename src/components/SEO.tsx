@@ -1,23 +1,6 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
-
-interface IMetaItemType1 {
-  name: string;
-  content: string;
-}
-
-interface IMetaItemType2 {
-  property: string;
-  content: string;
-}
+import { ISEOMetaItemType1, ISEOMetaItemType2 } from '../types';
 
 export interface IProps {
   siteData: any;
@@ -26,7 +9,7 @@ export interface IProps {
   description?: string;
   imageUrl?: string;
   keywords?: Array<string>;
-  meta?: Array<IMetaItemType1 | IMetaItemType2>;
+  meta?: Array<ISEOMetaItemType1 | ISEOMetaItemType2>;
 }
 
 function Container(props: IProps) {
