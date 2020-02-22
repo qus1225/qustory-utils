@@ -18,6 +18,7 @@
       font-weight: bold;
       @media (max-width: $not-desktop) {
         font-size: 34px;
+        line-height: 38px;
       }
     }
 
@@ -101,7 +102,7 @@
 
     @media (max-width: $not-desktop) {
       padding: 20px 24px;
-      margin: 80px -20px -20px;
+      margin: 50px -20px 30px;
     }
 
     .title {
