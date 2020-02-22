@@ -1,0 +1,139 @@
+@import '../../styles/common/common.scss';
+@import '../../styles/common/markdown/markdown.scss';
+
+.post-container {
+  color: $gray8;
+  margin-top: 26px;
+
+  $border-color: $gray4;
+
+  > .intro {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 30px;
+    margin-bottom: 26px;
+    position: relative;
+
+    > .title {
+      font-size: 46px;
+      font-weight: bold;
+      @media (max-width: $not-desktop) {
+        font-size: 34px;
+      }
+    }
+
+    > .sub-title {
+      color: $gray6;
+      margin-top: 24px;
+      font-size: 24px;
+      @media (max-width: $not-desktop) {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    > .created-at {
+      color: $border-color;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      background-color: #fff;
+
+      @media (max-width: $not-desktop) {
+      }
+    }
+  }
+
+  .body {
+    width: 100%;
+    overflow: hidden;
+    margin: 8px auto 0;
+    text-align: left;
+    padding-bottom: 26px;
+    // @media (max-width: $not-desktop) {
+    //   margin: 0 12px;
+    //   width: initial;
+    // }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  > .summary {
+    padding: 14px 8px;
+    background-color: $gray1;
+    color: $gray6;
+    margin-top: 18px;
+    font-style: italic;
+    border-radius: 4px;
+
+    &:before {
+      content: '" ';
+    }
+    &:after {
+      content: ' "';
+    }
+  }
+
+  > .series {
+    margin-top: 18px;
+    color: $yellow7;
+    font-weight: bold;
+  }
+
+  > .tags {
+    margin-top: 18px;
+
+    > .item {
+      color: $yellow7;
+      font-weight: bold;
+      padding-right: 6px;
+    }
+  }
+
+  .signiture {
+    background-color: $yellow0;
+    padding: 20px 24px;
+    margin-top: 80px;
+
+    @media (max-width: $not-desktop) {
+      padding: 20px 24px;
+      margin: 80px -20px -20px;
+    }
+
+    .title {
+      margin-bottom: 8px;
+      font-size: 20px;
+      color: $gray7;
+      @media (max-width: $not-desktop) {
+      }
+
+      .label {
+        color: $gray6;
+        padding-right: 7px;
+        font-size: 20px;
+      }
+
+      .name {
+        font-size: 14px;
+      }
+    }
+
+    .desc {
+      color: $gray6;
+      font-weight: lighter;
+      line-height: 26px;
+      @media (max-width: $not-desktop) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .extra-info {
+      color: $yellow6;
+      font-size: 14px;
+      text-align: right;
+    }
+  }
+}
