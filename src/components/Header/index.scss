@@ -1,0 +1,155 @@
+@import "../../../styles/common/common.scss";
+
+$header-height: 132px;
+$header-height-mobile: 112px;
+
+.content-container {
+  background-color: #ffffff;
+  color: $gray0;
+  min-height: 100vh;
+  padding-bottom: 30px;
+
+  > .content-header-wrapper {
+    z-index: 9999;
+    background-color: $gray7;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+
+    > .content-header {
+      height: $header-height;
+      position: relative;
+      overflow: scroll;
+      @media (max-width: $xs) {
+        height: $header-height-mobile;
+      }
+
+      &.expanded {
+        height: 100%;
+        max-height: $header-height + 468px;
+        padding-bottom: 46px;
+      }
+
+      > .title-area {
+        > .main {
+          font-size: 34px;
+          padding-top: 26px;
+          margin-bottom: 20px;
+          @media (max-width: $xs) {
+            font-size: 28px;
+            padding-top: 21px;
+            margin-bottom: 16px;
+          }
+        }
+
+        > .sub {
+          font-weight: bold;
+          font-size: 18px;
+          @media (max-width: $xs) {
+            font-size: 14px;
+          }
+
+          > .strong {
+            font-style: italic;
+            font-weight: normal;
+
+            > a {
+              margin-right: 8px;
+              color: $yellow3;
+              font-weight: bold;
+            }
+          }
+
+          > a {
+            margin-left: 6px;
+            // color: $yellow3;
+            font-weight: bold;
+          }
+        }
+      }
+
+      > .addon-area {
+        color: $gray5;
+        position: absolute;
+        right: 30px;
+        top: 12px;
+        font-size: 24px;
+        @media (max-width: $xs) {
+          right: 8px;
+          top: 8px;
+        }
+
+        > .rss-container {
+          i {
+            cursor: pointer;
+          }
+          .message {
+            display: none;
+            position: absolute;
+            left: -184px;
+            top: 1px;
+            font-size: 18px;
+            color: $gray8;
+            background-color: $yellow2;
+            padding: 14px 12px 10px 12px;
+            border-radius: 2px;
+            line-height: 24px;
+            font-size: 14px;
+
+            &.active {
+              display: block;
+            }
+
+            > b {
+              font-weight: bold;
+            }
+
+            #rss-close {
+              position: absolute;
+              right: 10px;
+              font-size: 18px;
+              top: 4px;
+            }
+          }
+        }
+      }
+
+      > .area-to-expand {
+        display: none;
+        margin-top: 26px;
+        &.active {
+          display: block;
+        }
+      }
+
+      > .fold-btn-container {
+        bottom: 6px;
+        position: absolute;
+        font-size: 22px;
+        font-weight: bold;
+        left: 0;
+        right: 0;
+        @media (max-width: $xs) {
+          bottom: 6px;
+          font-size: 16px;
+        }
+
+        > .fold-arrow {
+          color: $gray5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  > .content-body {
+    padding-top: $header-height + 12px;
+    color: $gray9;
+    max-width: 680px;
+    margin: auto;
+
+    @media (max-width: $xs) {
+      padding: $header-height-mobile 20px 0;
+    }
+  }
+}

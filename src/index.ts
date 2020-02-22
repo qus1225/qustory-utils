@@ -1,3 +1,4 @@
-import * as Common from './common';
+import * as Component from './components';
+import * as Types from './types';
 
-export { Common };
+export { Component, Types };

@@ -1,0 +1,7 @@
+@import "./github-markdown";
+@import "./prism-vsc-dark-plus";
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: none;
+}

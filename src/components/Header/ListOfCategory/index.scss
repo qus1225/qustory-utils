@@ -1,0 +1,51 @@
+@import "../../../../styles/common/common.scss";
+
+.category-list-container {
+  color: $gray9;
+  width: 50%;
+  min-width: 230px;
+  margin: auto;
+  background-color: $yellow1;
+  padding: 16px 10px;
+  position: relative;
+  margin-top: 60px;
+  border-radius: 4px;
+  @media (max-width: $xs) {
+    margin-top: 42px;
+  }
+
+  > .title {
+    position: absolute;
+    top: -28px;
+    left: 0;
+    border-radius: 4px;
+    padding: 10px 12px;
+    background-color: $yellow1;
+    font-size: 14px;
+    font-weight: bold;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      padding: 8px 12px;
+      top: -24px;
+    }
+  }
+
+  > .list {
+    display: flex;
+
+    > .item-wrapper {
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+      > a {
+        .item {
+          background-color: #fff;
+          padding: 8px;
+          border-radius: 2px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

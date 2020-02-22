@@ -1,0 +1,45 @@
+@import "./reset";
+@import "./color";
+@import "./fonts";
+
+body {
+  word-break: keep-all;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+$xs: 576px; // 모바일
+$not-desktop: 1080px; // 여기부터 모바일화면 쏴주기
+
+a {
+  text-decoration: none;
+  &:link,
+  &:active,
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+}
+
+.invisible-desktop {
+  @media (min-width: $not-desktop) {
+    display: none;
+  }
+}
+
+.invisible-mobile {
+  @media (max-width: $not-desktop) {
+    display: none;
+  }
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
