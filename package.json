@@ -2,7 +2,8 @@
   "name": "qustory-utils",
   "version": "1.0.2",
   "description": "Utils for Qustory",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc && cp -r src/styles dist/styles",
     "lint": "eslint ./src/**/*.ts",
