@@ -13,7 +13,6 @@ export interface IProps {
 }
 
 function Container(props: IProps) {
-  // TODO: 개별화
   const metaDescription =
     props.description || props.siteData.siteMetadata.description;
 

@@ -1,0 +1,45 @@
+@import '../../styles//common/common.scss';
+
+.post-list-container {
+  background-color: $yellow1;
+  padding: 18px;
+  position: relative;
+  margin-top: 60px;
+  @media (max-width: $xs) {
+    margin-top: 42px;
+  }
+
+  > .title {
+    position: absolute;
+    top: -34px;
+    left: 0;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #fff3bf;
+    font-size: 18px;
+    font-weight: bold;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      padding: 8px 12px;
+      top: -24px;
+    }
+  }
+
+  > .list {
+    > a {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      .item {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 2px;
+        font-size: 14px;
+      }
+    }
+  }
+}
