@@ -18,6 +18,7 @@ const Container = (props: IProps) => {
               return (
                 <Link to={`/post/${node.fields.slug}`} key={node.id}>
                   <div className="item">{node.frontmatter.title}</div>
+                  <div className="date">{node.fields.prefix}</div>
                 </Link>
               );
             }

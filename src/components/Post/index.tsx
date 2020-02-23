@@ -25,9 +25,7 @@ const Container = ({ post, theme }: IProps) => {
         <div className="sub-title">{post.frontmatter.subTitle}</div>
 
         <div className="created-at">
-          {post.fields.prefix
-            ? post.fields.prefix.replace('-', '.').replace('-', '.')
-            : 'Draft'}
+          {post.fields.prefix ? post.fields.prefix : 'Draft'}
         </div>
       </div>
 

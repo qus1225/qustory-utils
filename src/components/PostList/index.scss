@@ -28,17 +28,27 @@
 
   > .list {
     > a {
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      background-color: #fff;
 
       &:not(:last-child) {
         margin-bottom: 12px;
       }
 
       .item {
-        background-color: #fff;
         padding: 10px;
         border-radius: 2px;
         font-size: 14px;
+        line-height: 18px;
+      }
+
+      .date {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: 14px;
+        color: $gray5;
       }
     }
   }
