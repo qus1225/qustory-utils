@@ -15,6 +15,7 @@
 
     > .title {
       font-size: 46px;
+      line-height: 54px;
       font-weight: bold;
       @media (max-width: $not-desktop) {
         font-size: 34px;
@@ -118,6 +119,18 @@
 
       strong {
         color: $blue6;
+      }
+
+      blockquote {
+        padding: 2px 16px;
+        margin: 0 auto;
+        font-style: italic;
+        background-color: $blue0;
+        text-align: center;
+        border-radius: 10px;
+        > p {
+          font-weight: bold;
+        }
       }
     }
   }
