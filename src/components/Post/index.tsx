@@ -59,11 +59,12 @@ const Container = ({ post, theme }: IProps) => {
           <span className="name">쿠스, Qus</span>
         </div>
         <div className="desc">
-          직업은 소프트웨어 개발자, 웹 프론트엔드 & 백엔드 개발을 하고 있습니다.
+          직업은 소프트웨어 개발자.
           <br />
           기술로 사회문제를 해결하는 시빅해킹(Civic Hacking)에 관심이 많고,{' '}
-          <br className="invisible-mobile" />
-          취미로는 3D프린터를 활용한 메이커 활동도 하고 있습니다.
+          <br />
+          이것저것 생각나는 것들을 글로 정리하는 것을 좋아합니다.
+          {/* <br className="invisible-mobile" /> */}
         </div>
         <div className="extra-info">
           <a href="https://qustory.com/" target="_blank">
