@@ -34,8 +34,10 @@
   > .list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -5px;
 
     > .item-wrapper {
+      margin-top: 5px;
       &:not(:last-child) {
         margin-right: 4px;
       }
