@@ -200,11 +200,23 @@
       }
     }
 
-    .extra-info {
-      margin-top: 10px;
-      color: $yellow6;
-      font-size: 14px;
-      text-align: right;
+    > .footer {
+      display: flex;
+      justify-content: space-between;
+
+      .mailto {
+        color: $yellow6;
+        display: block;
+        padding-top: 10px;
+        font-size: 20px;
+      }
+
+      .extra-info {
+        font-size: 14px;
+        margin-top: 10px;
+        color: $yellow6;
+        text-align: right;
+      }
     }
   }
 }

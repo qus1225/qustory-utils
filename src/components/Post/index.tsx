@@ -66,11 +66,16 @@ const Container = ({ post, theme }: IProps) => {
           이것저것 생각나는 것들을 글로 정리하는 것을 좋아합니다.
           {/* <br className="invisible-mobile" /> */}
         </div>
-        <div className="extra-info">
-          <a href="https://qustory.com/" target="_blank">
-            더 궁금하다면...
-            <i className="la la-external-link-alt" />
+        <div className="footer">
+          <a className="mailto" href="mailto:qus1225@gmail.com">
+            <i className="las la-envelope"></i>
           </a>
+          <div className="extra-info">
+            <a href="https://qustory.com/" target="_blank">
+              더 궁금하다면...
+              <i className="la la-external-link-alt" />
+            </a>
+          </div>
         </div>
       </div>
 
