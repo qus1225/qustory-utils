@@ -8,7 +8,7 @@ interface IProps {
 }
 const Container = (props: IProps) => {
   return (
-    <div className="post-list-plain-container">
+    <div className="post-list-simple-container">
       <div className="title">{props.title}</div>
       <div className="list">
         {props.postData &&
