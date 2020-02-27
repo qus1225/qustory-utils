@@ -118,7 +118,11 @@ $header-height-mobile: 112px;
         display: none;
         margin-top: 26px;
         &.active {
-          display: block;
+          display: flex;
+          max-width: 680px;
+          flex-direction: column;
+          text-align: center;
+          margin: auto;
         }
       }
 
