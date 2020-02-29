@@ -1,6 +1,6 @@
 {
   "name": "qustory-utils",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "Utils for Qustory",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
