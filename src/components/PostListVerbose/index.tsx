@@ -16,12 +16,10 @@ const Container = (props: IProps) => {
           props.postList.map(({ node }: { node: any }) => {
             return (
               <Link to={`/post/${node.fields.slug}`} key={node.id}>
-                <div className="image-wrapper">
-                  <Img
-                    fluid={node.frontmatter.thumbNail.childImageSharp.fluid}
-                    className="image"
-                  />
-                </div>
+                <Img
+                  fluid={node.frontmatter.thumbNail.childImageSharp.fluid}
+                  className="image"
+                />
                 <div className="item-container">
                   <div className="top-container">
                     <div className="title">{node.frontmatter.title}</div>

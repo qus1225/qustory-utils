@@ -39,18 +39,14 @@ $container-background-color: $yellow1;
         margin-bottom: 12px;
       }
 
-      .image-wrapper {
-        width: 140px;
-        margin: 10px;
+      > .image {
         border-radius: 2px;
-        background-color: $container-background-color;
         @media (max-width: $xs) {
           width: 100px;
         }
-        > .image {
-          height: 60px;
-          opacity: 0.5;
-        }
+        margin: 10px;
+        width: 140px;
+        height: 60px;
       }
 
       > .item-container {
