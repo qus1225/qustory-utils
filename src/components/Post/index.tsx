@@ -1,13 +1,34 @@
 import React from 'react';
 import './index.scss';
 import Disqus from '../Disqus';
-import { Theme } from '../../types';
+import { Theme, CategoryType } from '../../types';
+import PostListSimple from '../PostListSimple';
+
+interface IOtherPosts {
+  previous: any;
+  node: any;
+  next: any;
+}
 
 interface IProps {
   post: any;
   theme: Theme;
+  otherPostsList?: Array<IOtherPosts>;
 }
-const Container = ({ post, theme }: IProps) => {
+const Container = ({ post, theme, otherPostsList }: IProps) => {
+  const otherPosts: IOtherPosts = otherPostsList
+    ? otherPostsList.find((item) => item.node.fields.slug === post.fields.slug)
+    : (null as any);
+
+  let postList: Array<any> = [];
+  if (otherPosts) {
+    postList = [];
+    postList = otherPosts.previous ? (postList = [otherPosts.previous]) : [];
+    postList = otherPosts.next
+      ? (postList = [...postList, otherPosts.next])
+      : postList;
+  }
+
   return (
     <div className="post-container">
       <div className="intro">
@@ -78,6 +99,15 @@ const Container = ({ post, theme }: IProps) => {
           </div>
         </div>
       </div>
+
+      {postList.length > 0 && (
+        <PostListSimple
+          categoryType={CategoryType.SERIES}
+          title={`'${post.fields.series}' 시리즈의 다른 이야기들`}
+          postList={postList}
+          desc={post.fields.seriesDescription}
+        />
+      )}
 
       <Disqus
         theme={theme}
