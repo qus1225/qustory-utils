@@ -15,7 +15,7 @@
     left: 0;
     border-radius: 4px;
     padding: 10px 20px;
-    background-color: #fff3bf;
+    background-color: $yellow1;
     font-size: 18px;
     font-weight: bold;
 
@@ -24,6 +24,13 @@
       padding: 8px 12px;
       top: -24px;
     }
+  }
+
+  > .desc {
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 2px;
+    margin-bottom: 16px;
   }
 
   > .list {

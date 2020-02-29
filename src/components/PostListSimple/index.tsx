@@ -1,15 +1,21 @@
 import React, { Component, useEffect, useState } from 'react';
 import './index.scss';
-import { graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
+import { CategoryType } from '../../types';
 
 interface IProps {
+  categoryType: CategoryType;
   postData: any;
   title: string;
+  desc?: string;
 }
 const Container = (props: IProps) => {
   return (
     <div className="post-list-simple-container">
       <div className="title">{props.title}</div>
+      {props.categoryType === CategoryType.SERIES && props.desc && (
+        <div className="desc">{props.desc}</div>
+      )}
       <div className="list">
         {props.postData &&
           props.postData.allMarkdownRemark.totalCount > 0 &&
