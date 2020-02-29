@@ -1,7 +1,9 @@
 @import '../../styles//common/common.scss';
 
+$container-background-color: $yellow1;
+
 .post-list-verbose-container {
-  background-color: $yellow1;
+  background-color: $container-background-color;
   padding: 18px;
   position: relative;
   margin-top: 60px;
@@ -10,12 +12,13 @@
   }
 
   > .title {
+    color: $gray7;
     position: absolute;
     top: -34px;
     left: 0;
     border-radius: 4px;
-    padding: 10px 20px;
-    background-color: #fff3bf;
+    padding: 12px 20px;
+    background-color: $container-background-color;
     font-size: 18px;
     font-weight: bold;
 
@@ -36,13 +39,17 @@
         margin-bottom: 12px;
       }
 
-      > .image {
-        margin: 10px;
-        height: 60px;
+      .image-wrapper {
         width: 140px;
+        margin: 10px;
         border-radius: 2px;
+        background-color: $container-background-color;
         @media (max-width: $xs) {
           width: 100px;
+        }
+        > .image {
+          height: 60px;
+          opacity: 0.5;
         }
       }
 
