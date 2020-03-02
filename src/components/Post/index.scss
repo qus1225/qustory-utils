@@ -132,6 +132,17 @@
           font-weight: bold;
         }
       }
+
+      > .refs {
+        margin-top: 34px;
+
+        &::before {
+          content: '참고';
+          display: block;
+          color: $gray7;
+          font-size: 28px;
+        }
+      }
     }
   }
 
