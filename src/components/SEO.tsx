@@ -4,7 +4,7 @@ import { ISEOMetaItemType1, ISEOMetaItemType2 } from '../types';
 
 export interface IProps {
   siteData: any;
-  title: string;
+  title?: string;
   defaultKeywordsByTheme: string;
   description?: string;
   imageUrl?: string;
@@ -13,6 +13,9 @@ export interface IProps {
 }
 
 function Container(props: IProps) {
+  const metaTitle = props.title
+    ? `${props.siteData.siteMetadata.title} - ${props.title}`
+    : props.siteData.siteMetadata.title;
   const metaDescription =
     props.description || props.siteData.siteMetadata.description;
 
@@ -22,13 +25,14 @@ function Container(props: IProps) {
     props.keywords && props.keywords.length > 0
       ? props.keywords.join(',') + ',' + defaultKeywords
       : defaultKeywords;
+
   return (
     <Helmet
       htmlAttributes={{
         lang: 'ko'
       }}
-      title={props.title}
-      titleTemplate={props.siteData.siteMetadata.title}
+      title={metaTitle}
+      titleTemplate={metaTitle}
       meta={[
         {
           name: `description`,
