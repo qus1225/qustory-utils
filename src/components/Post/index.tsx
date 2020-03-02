@@ -57,10 +57,6 @@ const Container = ({ post, theme, otherPostsList }: IProps) => {
         />
       </div>
 
-      {post.frontmatter.summary && (
-        <div className="summary">{post.frontmatter.summary}</div>
-      )}
-
       <div className="tags">
         {post.frontmatter.tags.map((tag: string) => {
           return (
@@ -101,12 +97,14 @@ const Container = ({ post, theme, otherPostsList }: IProps) => {
       </div>
 
       {postList.length > 0 && (
-        <PostListSimple
-          categoryType={CategoryType.SERIES}
-          title={`'${post.fields.series}' 시리즈의 다른 이야기들`}
-          postList={postList}
-          desc={post.fields.seriesDescription}
-        />
+        <div className="other-posts-container">
+          <PostListSimple
+            categoryType={CategoryType.SERIES}
+            title={`'${post.fields.series}' 시리즈의 다른 이야기들`}
+            postList={postList}
+            desc={post.fields.seriesDescription}
+          />
+        </div>
       )}
 
       <Disqus

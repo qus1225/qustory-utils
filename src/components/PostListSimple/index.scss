@@ -6,7 +6,7 @@
   position: relative;
   margin-top: 60px;
   @media (max-width: $xs) {
-    margin-top: 42px;
+    margin-top: 62px;
   }
 
   > .title {
@@ -21,8 +21,8 @@
 
     @media (max-width: $xs) {
       font-size: 14px;
-      padding: 8px 12px;
-      top: -24px;
+      padding: 14px 12px;
+      top: -34px;
     }
   }
 

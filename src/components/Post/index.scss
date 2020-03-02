@@ -157,35 +157,30 @@
       }
 
       > .refs {
+        font-size: 14px;
         background-color: $gray1;
         padding: 20px 20px;
         margin-top: 70px;
         margin-bottom: 30px;
         color: $gray7;
 
+        ul {
+          li {
+            line-height: 20px;
+            &:not(:last-child) {
+              margin-bottom: 4px;
+            }
+          }
+        }
+
         &::before {
           content: '참고 자료';
           display: block;
-          font-size: 18px;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: -2px;
         }
       }
-    }
-  }
-
-  > .summary {
-    padding: 14px 8px;
-    background-color: $gray1;
-    color: $gray6;
-    margin-top: 30px;
-    font-style: italic;
-    border-radius: 4px;
-    line-height: 24px;
-
-    &:before {
-      content: '" ';
-    }
-    &:after {
-      content: ' "';
     }
   }
 
@@ -254,6 +249,13 @@
         color: $yellow6;
         text-align: right;
       }
+    }
+  }
+
+  .other-posts-container {
+    margin-top: 106px;
+    @media (max-width: $not-desktop) {
+      margin: 106px -20px 30px;
     }
   }
 }
