@@ -133,14 +133,40 @@
         }
       }
 
-      > .refs {
-        margin-top: 34px;
+      > .histories {
+        color: $gray5;
+        font-size: 14px;
+
+        ul {
+          li {
+            line-height: 18px;
+            &:not(:last-child) {
+              margin-bottom: 2px;
+            }
+          }
+        }
 
         &::before {
-          content: '참고자료';
+          content: '수정 이력';
           display: block;
-          color: $gray7;
-          font-size: 28px;
+          font-size: 16px;
+          margin-top: 10px;
+          margin-bottom: -6px;
+          font-weight: bold;
+        }
+      }
+
+      > .refs {
+        background-color: $gray1;
+        padding: 20px 20px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        color: $gray7;
+
+        &::before {
+          content: '참고 자료';
+          display: block;
+          font-size: 18px;
         }
       }
     }
