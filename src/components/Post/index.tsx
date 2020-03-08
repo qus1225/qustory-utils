@@ -32,7 +32,7 @@ const Container = ({ post, theme, otherPostsList }: IProps) => {
   return (
     <div className="post-container">
       <div className="intro">
-        <div className="title">{post.frontmatter.title}</div>
+        <h1 className="title">{post.frontmatter.title}</h1>
 
         {post.fields.series && (
           <div className="series">

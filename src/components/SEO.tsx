@@ -14,7 +14,7 @@ export interface IProps {
 
 function Container(props: IProps) {
   const metaTitle = props.title
-    ? `${props.siteData.siteMetadata.title} - ${props.title}`
+    ? props.title
     : props.siteData.siteMetadata.title;
   const metaDescription =
     props.description || props.siteData.siteMetadata.description;

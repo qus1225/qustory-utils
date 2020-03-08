@@ -22,7 +22,7 @@ const Container = (props: IProps) => {
           props.postList.map((node) => {
             return (
               <Link to={`/post/${node.fields.slug}`} key={node.id}>
-                <div className="item">{node.frontmatter.title}</div>
+                <h1 className="item">{node.frontmatter.title}</h1>
                 <div className="date">{node.fields.prefix}</div>
               </Link>
             );
