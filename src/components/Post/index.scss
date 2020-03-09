@@ -72,6 +72,10 @@
     .markdown-body {
       color: $gray7;
 
+      a {
+        color: $yellow9;
+      }
+
       h1 {
         color: $yellow6;
         margin-top: 40px;
@@ -163,6 +167,10 @@
         margin-top: 70px;
         margin-bottom: 30px;
         color: $gray7;
+
+        a {
+          color: $gray7;
+        }
 
         ul {
           li {
