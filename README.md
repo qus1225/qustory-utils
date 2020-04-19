@@ -7,5 +7,14 @@
 
 ## 배포
 
-- `npm update`
-- `npm publish`
+```bash
+# 1. 변경내역 커밋
+
+# 2. 버전 업데이트
+
+$ npm version patch[minor | major]
+
+# 3. 배포
+$ npm publish
+$ git push
+```
